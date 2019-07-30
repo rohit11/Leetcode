@@ -37,11 +37,11 @@ class Solution {
             return
         }
         if open < n {
-            helper(arr: &arr, current: str + "(", n : n,open: open + 1, close : close)
+            helper(arr: &arr, current: current + "(", n : n, open: open + 1, close : close)
 
         }
-        if close > open {
-            helper(arr: &arr, current: str + ")", n : n,open: open, close : close + 1)
+        if close < open {
+            helper(arr: &arr, current: current + ")", n : n, open: open, close : close + 1)
         }
     }
     
